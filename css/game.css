@@ -1,0 +1,240 @@
+.hover-cursor:hover { cursor: pointer !important; }
+
+.die {
+    display:inline-block;
+    width: 64px;
+    height: 64px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: thin solid #DDD;
+    margin: 0 5px 5px 0;
+    background-color: #FFF;
+    /*background-image: -ms-linear-gradient(top, #FFFFFF 0%, #EBEBEB 100%);
+    background-image: -moz-linear-gradient(top, #FFFFFF 0%, #EBEBEB 100%);
+    background-image: -o-linear-gradient(top, #FFFFFF 0%, #EBEBEB 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #EBEBEB));
+    background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #EBEBEB 100%);
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #EBEBEB 100%);*/
+    -webkit-box-shadow:inset 0 0 10px 0 #C9C9C9;
+    box-shadow:inset 0 0 10px 0 #C9C9C9;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.die:hover {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    cursor: default;
+}
+
+.die > .die-icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 32px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.die:hover > .die-icon {
+    color: #2088DD;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.die > .die-value {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+}
+
+.die-new {
+    opacity: 0.4;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.die-new:hover {
+    border-color: #5ECC02;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(73,164,2,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(73,164,2,.6);
+    opacity: 1.0;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.die-new > .die-icon {
+    color: gray;
+}
+
+.die-new:hover > .die-icon {
+    color:  #49A942;
+}
+
+.die-new-preview {
+    margin: 0 auto;
+    display: block;
+    width: 64px;
+}
+
+.low-padding {
+    padding: 3px 8px;
+}
+
+.ico-set {
+    display:inline-block;
+    font-size:32px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.ico-set:hover {
+    color: #2088DD;
+    border: thin solid;
+    color: #2088DD;
+    cursor: pointer;
+}
+
+.icons_container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/*Flip Stuff*/
+
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000;
+    transform-style: preserve-3d;
+
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+
+}
+/*  UPDATED! flip the pane when hovered */
+.flip-container:hover .back {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+}
+.flip-container:hover .front {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 64px;
+    height: 64px;
+    display:inline-block;
+    margin-right:5px;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    background-color: #ffffff;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*  UPDATED! front pane, placed above back */
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+}
+
+/* flip the pane when hovered */
+.flip-container:hover .back, .flip-container.hover .back {
+    transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+}
+.flip-container:hover .front, .flip-container.hover .front {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+.flip-die {
+
+}
